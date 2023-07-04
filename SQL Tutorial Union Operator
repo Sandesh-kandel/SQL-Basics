@@ -20,14 +20,43 @@ Insert into WareHouseEmployeeDemographics VALUES
 (1051, 'Hidetoshi', 'Hasagawa', 40, 'Male'),
 (1052, 'Val', 'Johnson', 31, 'Female')
 
-Select *
+/*
+Select EmployeeID,  FirstName, Age
 from [SQL Tutorial].dbo.EmployeeDemographics
 
+
+union
 Select *
-from [SQL Tutorial].dbo.WareHouseEmployeeDemographics
+from [SQL Tutorial].dbo.EmployeeSalary
+Order by EmployeeID
 
 Select *
 from [SQL Tutorial].dbo.EmployeeDemographics
 full outer join [SQL Tutorial].dbo.WareHouseEmployeeDemographics
  ON EmployeeDemographics.EmployeeID=WareHouseEmployeeDemographics.EmployeeID
+
+
+*/
+
+
+1. Combining Employee Demographics and Employee Salary:
+SELECT EmployeeID, FirstName, Age
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+
+UNION
+
+SELECT EmployeeID, FirstName, NULL AS Age
+FROM [SQL Tutorial].dbo.EmployeeSalary
+ORDER BY EmployeeID;
+
+2. Performing a Full Outer Join between Employee Demographics and Warehouse Employee Demographics:
+SELECT *
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+FULL OUTER JOIN [SQL Tutorial].dbo.WareHouseEmployeeDemographics
+ON EmployeeDemographics.EmployeeID = WareHouseEmployeeDemographics.EmployeeID;
+
+
+
+
+
 
