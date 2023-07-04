@@ -1,6 +1,0 @@
-SELECT*
-FROM [SQL Tutorial].dbo.EmployeeDemographics
-inner join [SQL Tutorial].dbo.EmployeeSalary
-On EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
-
-*/
