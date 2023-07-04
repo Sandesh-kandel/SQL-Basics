@@ -1,0 +1,19 @@
+--Updating anf deleting data
+/*
+SELECT *
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+
+UPDATE [SQL Tutorial].dbo.EmployeeDemographics
+SET Age = 31, Gender= 'Female'
+WHERE FirstName = 'Jim' AND LastName = 'Halpert';
+
+*/
+
+SELECT *
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+UPDATE [SQL Tutorial].dbo.EmployeeDemographics
+SET Age = 31, Gender= 'Female'
+WHERE FirstName = 'Jim' AND LastName = 'Halpert';
+
+DELETE FROM [SQL Tutorial].dbo.EmployeeDemographics
+WHERE EmployeeID = 1002
